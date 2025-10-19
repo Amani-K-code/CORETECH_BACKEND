@@ -1,0 +1,18 @@
+# Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.cpython-*
+
+# Alembic configuration
+# NOTE: The 'migrations/versions/' directory is intentionally NOT ignored
+# as these files are essential for version control.
+alembic.ini
+script.py.mako
+README
+
+# Local environment and sensitive files
+.env
+.env.local
+.env.cloud
