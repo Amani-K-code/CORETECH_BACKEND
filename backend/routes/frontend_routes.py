@@ -13,23 +13,23 @@ frontend_bp = Blueprint('frontend', __name__, template_folder=TEMPLATE_FOLDER)
 
 @frontend_bp.route('/')
 def home():
-    return redirect(url_for('frontend.login'))
+    return {"status": "API is operational"}, 200
 
 @frontend_bp.route('/login')
 def login():
-    return render_template('index.html')
+    return {"status": "API is operational"}, 200
 
 @frontend_bp.route('/register')
 def register():
-    return render_template('register.html')
+    return {"status": "API is operational"}, 200
 
 @frontend_bp.route('/dashboard')
 def dashboard():
-    return render_template('dashboard.html')
+    return {"status": "API is operational"}, 200
 
 @frontend_bp.route('/admin_dashboard')
 def admin_dashboard():
-    return render_template('admin_dashboard.html')
+    return {"status": "API is operational"}, 200
 
 #@frontend_bp.route('/admin/system_logs')
 #def system_logs():
