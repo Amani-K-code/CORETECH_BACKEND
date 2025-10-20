@@ -6,10 +6,11 @@ from .. import db
 import os
 from sqlalchemy import desc
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_FOLDER = os.path.join(BASE_DIR, '..', '..', 'frontend', 'templates')
+ROOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
+TEMPLATES_ROOT_PATH = os.path.join(ROOT_DIR, 'templates')
 
-frontend_bp = Blueprint('frontend', __name__, template_folder=TEMPLATE_FOLDER)
+
+frontend_bp = Blueprint('frontend', __name__)
 
 @frontend_bp.route('/')
 def home():
@@ -40,9 +41,9 @@ def serve_partial(page_name):
     try:
 
         return send_from_directory(
-            directory=frontend_bp.template_folder,
+            directory=TEMPLATES_ROOT_PATH,
             path=f'_{page_name}.html'
         )
     except FileNotFoundError:
 
-        return "File not found", 404
+        return "Partial HTML template not found", 404
