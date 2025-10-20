@@ -3,5 +3,7 @@ Flask-SQLAlchemy
 Flask-Bcrypt
 Flask-JWT-Extended
 Flask-Migrate
+flask-cors
 psycopg2-binary
 python-dotenv
+gunicorn
