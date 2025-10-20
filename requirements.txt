@@ -7,5 +7,3 @@ flask-cors
 psycopg2-binary
 python-dotenv
 gunicorn
-
-//DATABASE_URL:postgresql://davis_water_user:qkO1i5FYEKs72AWY8aqqVoHHGTz5xUBj@dpg-d3r1pber433s73e3uke0-a/davis_water
